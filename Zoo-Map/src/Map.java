@@ -32,7 +32,12 @@ public class Map extends Applet
 		path.addPoint(150, 250);
 		path.addPoint(100, 300);
 		path.addPoint(1, 300);
-		
+		//Animated Man
+		g.setColor(new Color(244, 206, 149));
+		g.fillOval(300, 600, 80, 80);
+		g.fillRect(328, 675, 25, 10);
+		g.setColor(new Color(65, 20, 255));
+		g.fillRect(320, 685, 40, 65);
 		
 		
 		
