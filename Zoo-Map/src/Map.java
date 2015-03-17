@@ -1,9 +1,43 @@
 
-public class Map {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+import java.awt.*;
+import java.applet.*;
 
+
+public class Map extends Applet
+{
+	public void paint(Graphics g)
+	{
+		//Gift Shop
+		g.setColor(Color.orange);
+		g.fillRect(200, 300, 140, 140); 
+		g.setColor(Color.green);
+		g.drawString("Gift Shop", 250, 325);
+		
+		
+		//Restaurant (Burger place)
+		g.setColor(Color.yellow);
+		g.fillRect(500, 200, 140, 140);
+		g.setColor(Color.black);
+		g.drawString("Joe's Burger Shack", 520, 230);
+		
+		
+		//Path
+		g.setColor(Color.blue);
+		
+		Polygon path = new Polygon();
+		path.addPoint(0, 200);
+		path.addPoint(100, 200);
+		path.addPoint(150, 150);
+		path.addPoint(150, 250);
+		path.addPoint(100, 300);
+		path.addPoint(1, 300);
+		
+		
+		
+		
+		
 	}
-
+	
+	
 }
