@@ -15,7 +15,6 @@ serialVersionUID = 1L;
 	{
 		//Path
 		g.setColor(Color.blue);
-		
 		Polygon path = new Polygon();
 		path.addPoint(0, 200);
 		path.addPoint(100, 200);
@@ -23,6 +22,7 @@ serialVersionUID = 1L;
 		path.addPoint(150, 250);
 		path.addPoint(100, 300);
 		path.addPoint(1, 300);
+		
 		//Restrooms
 		g.setColor(new Color(128, 128, 128)); //building
 		g.fillRect(800, 100, 220, 100);
@@ -41,7 +41,14 @@ serialVersionUID = 1L;
 		
 		//Gift Shop
 		g.setColor(Color.orange);
-		g.fillRect(200, 300, 140, 140); 
+		g.fillRect(200, 300, 140, 140); //building
+		g.setColor(Color.gray);
+		g.drawRect(247, 405, 20, 35);
+		g.drawRect(246, 404, 22, 37);
+		g.drawRect(245, 403, 23, 38);
+		g.drawRect(267, 405, 20, 35);
+		g.drawRect(266, 404, 23, 37);
+		g.drawRect(265, 403, 24, 38);
 		g.setColor(Color.green);
 		g.setFont(new Font("GIFT SHOP", Font.ITALIC, 14));
 		g.drawString("GIFT SHOP", 235, 325);
@@ -55,10 +62,10 @@ serialVersionUID = 1L;
 		
 		//Animated Man
 		g.setColor(new Color(244, 206, 149));
-		g.fillOval(300, 600, 80, 80);
-		g.fillRect(328, 675, 25, 10);
+		g.fillOval(300, 600, 80, 80); // head
+		g.fillRect(328, 675, 25, 10); // smallllll neck
 		g.setColor(new Color(65, 20, 255));
-		g.fillRect(320, 685, 40, 65);
+		g.fillRect(320, 685, 40, 65); //body
 		
 		
 		
