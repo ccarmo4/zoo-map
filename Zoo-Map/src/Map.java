@@ -66,12 +66,16 @@ serialVersionUID = 1L;
 		g.setFont(new Font("JOE'S BURGER SHACK", Font.ITALIC, 12));
 		g.drawString("JOE'S BURGER SHACK", 505, 225);
 		
-		//Animated Man
+	//Animated Man
+
 		g.setColor(new Color(244, 206, 149));
-		g.fillOval(300, 600, 80, 80); // head
-		g.fillRect(328, 675, 25, 10); // smallllll neck
+		g.fillOval(20, 550, 80, 80);
+		g.fillRect(48, 625, 25, 10);
 		g.setColor(new Color(65, 20, 255));
-		g.fillRect(320, 685, 40, 65); //body
+		g.fillRect(40, 635, 40, 65);
+		g.setColor(Color.BLACK);
+		g.fillOval(40, 575, 10, 10);//eyes
+		g.fillOval(60, 575, 10, 10);
 		
 		
 		
