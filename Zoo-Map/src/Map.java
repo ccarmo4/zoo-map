@@ -40,16 +40,16 @@ serialVersionUID = 1L;
 		g.drawString("WOMENS", 967, 160);
 		
 		//Gift Shop
-		g.setColor(Color.orange);
+		g.setColor(new Color(128, 64, 64));
 		g.fillRect(200, 300, 140, 140); //building
 		g.setColor(Color.gray);
 		g.drawRect(247, 405, 20, 35);
 		g.drawRect(246, 404, 22, 37);
 		g.drawRect(245, 403, 23, 38);
 		g.drawRect(267, 405, 20, 35);
-		g.drawRect(266, 404, 23, 37);
+		g.drawRect(266, 404, 22, 37);
 		g.drawRect(265, 403, 24, 38);
-		g.setColor(Color.green);
+		g.setColor(Color.white);
 		g.setFont(new Font("GIFT SHOP", Font.ITALIC, 14));
 		g.drawString("GIFT SHOP", 235, 325);
 		
