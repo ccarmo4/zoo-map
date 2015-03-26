@@ -13,15 +13,21 @@ serialVersionUID = 1L;
 
 	public void paint(Graphics g)
 	{
-		//Path
-		g.setColor(Color.blue);
+	g.setColor(Color.blue);
 		Polygon path = new Polygon();
-		path.addPoint(0, 200);
-		path.addPoint(100, 200);
-		path.addPoint(150, 150);
-		path.addPoint(150, 250);
-		path.addPoint(100, 300);
-		path.addPoint(1, 300);
+
+		path.addPoint(0, 550);
+		path.addPoint(450, 345);
+		path.addPoint(800, 345);
+		path.addPoint(1175, 245);
+		path.addPoint(2500, 245);
+		path.addPoint(2500, 445);
+		path.addPoint(1175, 445);
+		path.addPoint(800, 545);
+		path.addPoint(450, 545);
+		path.addPoint(0, 750);
+		g.fillPolygon(path);
+	
 		
 		//Restrooms
 		g.setColor(new Color(128, 128, 128)); //building
