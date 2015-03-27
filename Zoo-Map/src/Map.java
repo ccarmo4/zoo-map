@@ -66,6 +66,7 @@ serialVersionUID = 1L;
 		g.setFont(new Font("JOE'S BURGER SHACK", Font.ITALIC, 12));
 		g.drawString("JOE'S BURGER SHACK", 605, 225);
 		
+		//LINKING PART
 		AnimatedMan.drawMan(g);
 		
 		
