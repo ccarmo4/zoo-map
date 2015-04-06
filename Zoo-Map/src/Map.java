@@ -11,6 +11,8 @@ public class Map extends Applet
 /****/ private static final long 
 serialVersionUID = 1L;
 
+private AirHockey craft;
+
 	public void paint(Graphics g)
 	{
 	g.setColor(Color.blue);
@@ -69,7 +71,8 @@ serialVersionUID = 1L;
 		//LINKING PART
 		AnimatedMan.drawMan(g);
 		
-		
+		 craft = new AirHockey();
+		 g.drawImage(craft.getImage(), 0, 550, craft);
 		
 	}
 	
