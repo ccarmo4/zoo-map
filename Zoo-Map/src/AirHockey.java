@@ -16,9 +16,18 @@ public class AirHockey extends Applet {
     private Image image;
 
     public AirHockey() {
+        
+    	ImageIcon ii = new ImageIcon(this.getClass().getResource(craft));
+		//System.out.println("got it");
+
+        image = ii.getImage();
+        x = 0;
+        y = 500;
+    }    
+    public AirHockey(String craft) {
     
     	ImageIcon ii = new ImageIcon(this.getClass().getResource(craft));
-		System.out.println("got it");
+		//System.out.println("got it");
 
         image = ii.getImage();
         x = 0;
