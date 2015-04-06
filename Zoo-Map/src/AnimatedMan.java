@@ -9,8 +9,8 @@ public class AnimatedMan {
 	{
 		//Animated Man
 
-		// same x, just add to change....same y, just add to change...
 		
+		//USE SPRITE instead in order to make animation smoother
 		
 		
 		g.setColor(new Color(244, 206, 149));
@@ -18,8 +18,10 @@ public class AnimatedMan {
 		g.fillRect(48, 625, 25, 10);
 		g.setColor(new Color(65, 20, 255));
 		g.fillRect(40, 635, 40, 65);
+		
+		//eyes
 		g.setColor(Color.BLACK);
-		g.fillOval(40, 575, 10, 10);//eyes
+		g.fillOval(40, 575, 10, 10);
 		g.fillOval(70, 575, 10, 10);
 		
 		
