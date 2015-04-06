@@ -15,6 +15,8 @@ private AirHockey craft;
 
 	public void paint(Graphics g)
 	{
+		final AirHockey grass = new AirHockey("pixalted grass.png");
+		g.drawImage(grass.getImage(),0,0,grass);
 	g.setColor(Color.blue);
 		Polygon path = new Polygon();
 
