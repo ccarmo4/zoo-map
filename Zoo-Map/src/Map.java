@@ -5,15 +5,20 @@
 
 import java.awt.*;
 import java.applet.*;
+import java.util.Date;
 
-public class Map extends Applet
+public class Map extends Applet implements Runnable
+
 {
+	int x = 0;
+	int y = 550;
 /****/ private static final long 
 serialVersionUID = 1L;
 
 private AirHockey craft;
 
 	public void paint(Graphics g)
+	
 	{
 		final AirHockey grass = new AirHockey("pixalted grass.png");
 		g.drawImage(grass.getImage(),0,0,grass);
@@ -73,10 +78,32 @@ private AirHockey craft;
 		//LINKING PART
 		AnimatedMan.drawMan(g);
 		
+		//drawing man
 		 craft = new AirHockey();
-		 g.drawImage(craft.getImage(), 0, 550, craft);
+		 
+		 g.drawImage(craft.getImage(), x, y, craft);
+		 
+		 
 		
 	}
-	
-	
+		//Run Method 
+	Thread runner;
+	 public void start() {
+	     if (runner == null) {
+	       runner = new Thread(this);
+	       runner.start();
+	     }
+	   }
+
+	  
+	  
+	   public void run() {
+	     while (true) {
+	      x++;
+	       repaint();
+	      try { Thread.sleep(10); }
+	    
+	       catch (InterruptedException e) {}
+	     }
+	   }
 }
