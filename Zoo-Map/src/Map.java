@@ -5,7 +5,8 @@
 
 import java.awt.*;
 import java.applet.*;
-import java.util.Date;
+
+import java.awt.event.*;
 
 public class Map extends Applet implements Runnable
 
