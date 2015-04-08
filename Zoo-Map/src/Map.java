@@ -5,7 +5,6 @@
 
 import java.awt.*;
 import java.applet.*;
-
 import java.awt.event.*;
 
 public class Map extends Applet implements Runnable
@@ -44,7 +43,8 @@ private AirHockey craft;
 		buildings.drawem(g);
 
 		//LINKING PART
-		AnimatedMan.drawMan(g);
+		ElephantPart.drawPanel.paintComponent(g);
+		FlamingoPart.drawHabitat(g);
 		
 		//drawing man
 		 craft = new AirHockey();
