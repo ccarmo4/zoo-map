@@ -27,6 +27,13 @@ serialVersionUID = 1L;
 		path.addPoint(450, 545);
 		path.addPoint(0, 750);
 		g.fillPolygon(path);
+		
+		g.drawLine(50, 0, 50, 900);
+		g.drawLine(0, 530, 2000, 530);
+		
+		Polygon paths = new Polygon();
+		paths.addPoint(0, 555);
+	//	paths.addPoint()
 	
 		
 		//Restrooms
@@ -67,7 +74,6 @@ serialVersionUID = 1L;
 		g.drawString("JOE'S BURGER SHACK", 605, 225);
 		
 		AnimatedMan.drawMan(g);
-		
 		
 		
 	}
