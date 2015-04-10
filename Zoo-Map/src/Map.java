@@ -8,25 +8,25 @@ import java.applet.*;
 import java.awt.event.*;
 
 public class Map extends Applet implements Runnable
-
 {
 	int x = 0;
 	int y = 550;
-/****/ private static final long 
-serialVersionUID = 1L;
+/**
+  *
+  */ 
+private static final long serialVersionUID = 1L;
 
 private AirHockey craft;
 
 	public void paint(Graphics g)
-	
 	{
-		//Background image (grass)
+		//BACKGROUND IMAGE (GRASS)
 		final AirHockey grass = new AirHockey("pixalted grass.png");
 		g.drawImage(grass.getImage(),0,0,grass);
-		//Main Path
+		
+		//MAINPATH
 	g.setColor(Color.blue);
 		Polygon path = new Polygon();
-
 		path.addPoint(0, 550);
 		path.addPoint(450, 345);
 		path.addPoint(800, 345);
@@ -38,46 +38,34 @@ private AirHockey craft;
 		path.addPoint(450, 545);
 		path.addPoint(0, 750);
 		g.fillPolygon(path);
-	
-		
-		buildings.drawem(g);
-
-		 //LINKING PART
-//		AnimatedMan.drawMan(g);
 
 		//LINKING PART
+		buildings.drawem(g);
 		ElephantPart.drawPanel.paintComponent(g);
 		FlamingoPart.drawHabitat(g);
 		HippoPart.drawPanel.paintComponent(g);
 		SnowLeopardPart.drawHabitat(g);
 		
-		//drawing man
+		//DRAWING MAN
 		 craft = new AirHockey();
-		 
 		 g.drawImage(craft.getImage(), x, y, craft);
-		 
-		 
-		
 	}
-		//Run Method 
-	Thread runner;
-	 public void start() {
-	     if (runner == null) {
+	
+		//RUN METHOD 
+		Thread runner;
+		public void start() {
+		if (runner == null) {
 	       runner = new Thread(this);
 	       runner.start();
-	     }
 	   }
-
-	  
-	  
+	}
+	 
 	   public void run() {
-	     while (true) {
+	   while (true) {
 	      x++;
-	       repaint();
-	      try { Thread.sleep(10); }
-	    
-	       catch (InterruptedException e) {}
-	     }
+	      repaint();
+	   try { Thread.sleep(10); }
+	   catch (InterruptedException e) {}
 	   }
-	   
+	}	   
 }
