@@ -44,7 +44,7 @@ public class buildings {
 		g.setColor(Color.white); 
 		g.setFont(new Font("GIFT SHOP", Font.ITALIC, 14));
 		g.drawString("GIFT SHOP", 185, 265);
-		//adding black dots so that it can be "cheetah print" using coding from GraphicsLab03st
+		
 				
 		//Restaurant (Burger place)
 		g.setColor(Color.yellow); 

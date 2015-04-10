@@ -43,7 +43,7 @@ private AirHockey craft;
 		
 		buildings.drawem(g);
 
-		//LINKING PART
+		 //LINKING PART
 		AnimatedMan.drawMan(g);
 		
 		//drawing man
