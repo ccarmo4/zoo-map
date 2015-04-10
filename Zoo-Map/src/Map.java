@@ -42,6 +42,9 @@ private AirHockey craft;
 		
 		buildings.drawem(g);
 
+		 //LINKING PART
+//		AnimatedMan.drawMan(g);
+
 		//LINKING PART
 		ElephantPart.drawPanel.paintComponent(g);
 		FlamingoPart.drawHabitat(g);
