@@ -5,7 +5,7 @@ import java.awt.geom.Rectangle2D;
 final public class ElephantPart 
 {
 JFrame frame;
-DrawPanel drawPanel;
+static DrawPanel drawPanel;
 private int oneX = 56;
 boolean left = false;
 boolean right = true;
@@ -65,6 +65,7 @@ class DrawPanel extends JPanel
 	 * 
 	 */
 private static final long serialVersionUID = 1L;
+
 
 public void paintComponent(Graphics g) 
 {
