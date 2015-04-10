@@ -45,6 +45,8 @@ private AirHockey craft;
 		//LINKING PART
 		ElephantPart.drawPanel.paintComponent(g);
 		FlamingoPart.drawHabitat(g);
+		HippoPart.drawPanel.paintComponent(g);
+		SnowLeopardPart.drawHabitat(g);
 		
 		//drawing man
 		 craft = new AirHockey();

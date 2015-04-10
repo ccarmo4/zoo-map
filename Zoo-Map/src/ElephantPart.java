@@ -10,17 +10,17 @@ import java.awt.geom.Rectangle2D;
 public class ElephantPart 
 {
 JFrame frame;
-DrawPanel drawPanel;
+static DrawPanel drawPanel;
 private int oneX = 56;
 boolean left = false; //cloud set direction
 boolean right = true; //when returning
-public static void main(String[] args) {
+public void main(String[] args) {
 	new ElephantPart().go();
 }
 
 //JFRAME (applet window is full screen size, (1590,850))
 
-private void go() 
+public void go() 
 {
 frame = new JFrame("Elephant");
 frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -35,7 +35,7 @@ moveIt();
 
 //cloud movement coding
 
-private void moveIt()
+public void moveIt()
 {
 	while(true){
 
@@ -73,10 +73,9 @@ private void moveIt()
 class DrawPanel extends JPanel 
 {
 /**
-	 * 
+ 	* 
 	 */
-private static final long serialVersionUID = 1L;
-
+	private static final long serialVersionUID = 1L;
 public void paintComponent(Graphics g) 
 {
 	Graphics2D g2d = (Graphics2D) g;
@@ -84,6 +83,7 @@ public void paintComponent(Graphics g)
 	
 			//sky
 			//GRADIENT
+	
 			GradientPaint cyantoblue = new GradientPaint(0,0, Color.CYAN, 1600, 0, Color.BLUE);
 			g2d.setPaint(cyantoblue);
 			g2d.fill((new Rectangle2D.Double(0,0,1600,1600)));
