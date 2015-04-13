@@ -20,11 +20,7 @@ public class SnowLeopardPart extends Applet{
 		drawAnimal(g);
 	}
 
-	public static void drawAnimal(Graphics g)
-	{
-		
-	}
-	
+	public static void drawAnimal(Graphics g) {}
 	public static void drawHabitat(Graphics g)
 	{
 		Graphics2D g2d= (Graphics2D) g;
