@@ -6,12 +6,11 @@ public class buildings {
 
 	public static void drawem(Graphics g)
 	{
-		//Restrooms
+		//Drawing the restrooms building
 		g.setColor(new Color(128, 128, 128)); 
-		//building
 		g.fillRect(1200, 100, 220, 100);
 		g.setColor(new Color(145, 145, 145)); 
-		//divider
+		//divider for the doors
 		g.drawRect(1200, 110, 110, 90);		
 		g.drawRect(1310, 110, 110, 90);
 		g.setColor(Color.blue); 
@@ -19,16 +18,15 @@ public class buildings {
 		g.fillRect(1220, 165, 20, 35);		
 		g.fillRect(1380, 165, 20, 35);
 		g.setColor(Color.white); 
-		//signs
+		//signs for the restroom (setting the font and drawing a string (text) to make it show up)
 		g.setFont(new Font("RESTROOMS", Font.ITALIC, 12));
 		g.drawString("RESTROOMS", 1270, 110);
 		g.setFont(new Font("MENS", Font.BOLD, 10));
 		g.drawString("MENS", 1217, 160);		
 		g.drawString("WOMENS", 1367, 160);
 		
-		//Gift Shop
+		//Gift Shop building
 		g.setColor(new Color(128, 64, 64)); 
-		//building
 		g.fillRect(150, 250, 140, 140); 
 		g.setColor(Color.gray); 
 		//doors
@@ -48,8 +46,9 @@ public class buildings {
 		g.drawString("GIFT SHOP", 185, 265);
 		
 				
-		//Restaurant (Burger place)
+		//Restaurant (Burger place) building drawing
 		g.setColor(Color.yellow); 
+		g.fillRect(600, 180, 180, 140); 
 		//building
 		g.fillRect(600, 205, 180, 115); 
 		g.setColor(Color.gray); 
@@ -64,7 +63,7 @@ public class buildings {
 		g.drawRect(610, 280, 45, 20);
 		g.drawRect(609, 279, 47, 22);
 		g.drawRect(608, 278, 48, 23);
-		//#2
+		//second set of windows drawn
 		g.drawRect(725, 280, 45, 20);
 		g.drawRect(724, 279, 47, 22);
 		g.drawRect(723, 278, 48, 23);
@@ -72,6 +71,16 @@ public class buildings {
 		g.setColor(Color.black);
 		g.setFont(new Font("JOE'S BURGER SHACK", Font.ITALIC, 12));
 		g.drawString("JOE'S BURGER SHACK", 625, 260);
+		
+		//adding a lake
+		g.setColor(new Color(128,255,255));
+		g.fillOval(250,100,250,100);
+		//adding a bush
+		g.setColor(new Color(0, 255,0));
+		g.fillOval(240, 95,35,35);
+		g.fillOval(250, 75,35,35);
+		g.fillOval(260, 95,35,35);
+		
 		
 		Random randint = new Random(12345);
 		for (int k = 1; k <= 100; k++)
