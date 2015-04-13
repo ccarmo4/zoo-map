@@ -7,7 +7,7 @@ import java.awt.*;
 import java.applet.*;
 import java.awt.event.*;
 
-public class Map extends Applet implements Runnable
+public class Map extends Applet implements Runnable, KeyListener
 
 {
 	int x = 0;
@@ -20,11 +20,12 @@ private AirHockey craft;
 	public void paint(Graphics g)
 	
 	{
-		//Background image (grass)
+		//Importing image (grass) for background
 		final AirHockey grass = new AirHockey("pixalted grass.png");
 		g.drawImage(grass.getImage(),0,0,grass);
-		//Main Path
-	g.setColor(Color.blue);
+		
+		//Drawing the Main Path by making a new polygon
+		g.setColor(Color.blue);
 		Polygon path = new Polygon();
 
 		path.addPoint(0, 550);
@@ -39,25 +40,26 @@ private AirHockey craft;
 		path.addPoint(0, 750);
 		g.fillPolygon(path);
 	
-		
+		//calling the buildings file and the class "drawem" in order to draw the buildings when the main file (map) is run
 		buildings.drawem(g);
 
-		 //LINKING PART
-//		AnimatedMan.drawMan(g);
-
 		//LINKING PART
-		ElephantPart.drawPanel.paintComponent(g);
-		FlamingoPart.drawHabitat(g);
+		//ElephantPart.drawPanel.paintComponent(g);
+
+		//Draws Flamingo successfully
+		//FlamingoPart.drawHabitat(g);
 		
-		//drawing man
+		//Calling the image in class AirHockey
 		 craft = new AirHockey();
 		 
 		 g.drawImage(craft.getImage(), x, y, craft);
+		 System.out.println("Airhockey yo");
 		 
 		 
-		
+		 
+		addKeyListener(craft);
 	}
-		//Run Method 
+		//Run Method to move the man
 	Thread runner;
 	 public void start() {
 	     if (runner == null) {
@@ -70,12 +72,76 @@ private AirHockey craft;
 	  
 	   public void run() {
 	     while (true) {
-	      x++;
+	     // craft.move(1,1);
 	       repaint();
 	      try { Thread.sleep(10); }
 	    
 	       catch (InterruptedException e) {}
 	     }
 	   }
+	   //This shows what happens when you press each key (x and y control whether the man moves up/down/left/right)
+	    public void keyPressed(KeyEvent e) {
+
+	        int key = e.getKeyCode();
+	        System.out.println(key);
+	        if (key == KeyEvent.VK_LEFT) {
+	            x = -1;
+	        }
+
+	        if (key == KeyEvent.VK_RIGHT) {
+	            x = 1;
+	        }
+
+	        if (key == KeyEvent.VK_UP) {
+	            y = -1;
+	        }
+
+	        if (key == KeyEvent.VK_DOWN) {
+	            y = 1;
+	        }
+	    }
+
+	    public void keyReleased(KeyEvent e) {
+	        int key = e.getKeyCode();
+
+	        if (key == KeyEvent.VK_LEFT) {
+	           x = 0;
+	        }
+
+	        if (key == KeyEvent.VK_RIGHT) {
+	           x = 0;
+	        }
+
+	        if (key == KeyEvent.VK_UP) {
+	            y = 0;
+	        }
+
+	        if (key == KeyEvent.VK_DOWN) {
+	            y = 0;
+	        }
+	    }
+		@Override
+		public void keyTyped(KeyEvent e) {
+			// TODO Auto-generated method stub
+	        int key = e.getKeyCode();
+
+	        if (key == KeyEvent.VK_LEFT) {
+	            x = -1;
+	        }
+
+	        if (key == KeyEvent.VK_RIGHT) {
+	            x = 1;
+	        }
+
+	        if (key == KeyEvent.VK_UP) {
+	            y = -1;
+	        }
+
+	        if (key == KeyEvent.VK_DOWN) {
+	            y = 1;
+	        }
+	
+		}
+
 	   
 }

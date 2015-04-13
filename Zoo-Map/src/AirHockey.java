@@ -2,13 +2,14 @@
 import java.applet.*;
 import java.awt.Image;
 import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 
 import javax.swing.ImageIcon;
+//This states the name of the class, the type it is (Applet) and the KeyListener which will allow the program to know the key being pressed
+public class AirHockey extends Applet implements KeyListener {
 
-public class AirHockey extends Applet {
-
-    private String craft = "craft.jpg";
-
+	private String craft = "craft.jpg";
+	//Declaring the variables that we will use to establish the location of the man
     private int dx;
     private int dy;
     private int x;
@@ -16,18 +17,18 @@ public class AirHockey extends Applet {
     private Image image;
 
     public AirHockey() {
-        
+    //This is retrieving the image and setting its initial location
     	ImageIcon ii = new ImageIcon(this.getClass().getResource(craft));
-		//System.out.println("got it");
-
+		
         image = ii.getImage();
         x = 0;
         y = 500;
     }    
+    
     public AirHockey(String craft) {
     
     	ImageIcon ii = new ImageIcon(this.getClass().getResource(craft));
-		//System.out.println("got it");
+		
 
         image = ii.getImage();
         x = 0;
@@ -92,4 +93,9 @@ public class AirHockey extends Applet {
             dy = 0;
         }
     }
+	@Override
+	public void keyTyped(KeyEvent arg0) {
+		// TODO Auto-generated method stub
+		
+	}
 }
