@@ -25,7 +25,7 @@ private AirHockey craft;
 		g.drawImage(grass.getImage(),0,0,grass);
 		
 		//MAINPATH
-	g.setColor(Color.blue);
+		g.setColor(Color.blue);
 		Polygon path = new Polygon();
 		path.addPoint(0, 550);
 		path.addPoint(450, 345);
@@ -45,6 +45,7 @@ private AirHockey craft;
 		FlamingoPart.drawHabitat(g);
 		HippoPart.drawPanel.paintComponent(g);
 		SnowLeopardPart.drawHabitat(g);
+		PenguinPart.drawPanel.paintComponent(g);
 		
 		//DRAWING MAN
 		 craft = new AirHockey();
@@ -53,18 +54,26 @@ private AirHockey craft;
 	
 		//RUN METHOD 
 		Thread runner;
-		public void start() {
-		if (runner == null) {
-	       runner = new Thread(this);
-	       runner.start();
-	   }
-	}
+		public void start() 
+		{
+		if (runner == null) 
+			{
+				runner = new Thread(this);
+				runner.start();
+			}
+		}
 	 
-	   public void run() {
-	   while (true) {
+	   public void run() 
+	   {
+	   while (true) 
+	   {
 	      x++;
 	      repaint();
-	   try { Thread.sleep(10); }
+	   try 
+	   		{ 
+		   Thread.sleep(10); 
+	   		}
+	   
 	   catch (InterruptedException e) {}
 	   }
 	}	   

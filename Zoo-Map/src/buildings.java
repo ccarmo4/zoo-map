@@ -1,4 +1,6 @@
 import java.awt.*;
+import java.util.Random;
+
 
 public class buildings {
 
@@ -49,15 +51,15 @@ public class buildings {
 		//Restaurant (Burger place)
 		g.setColor(Color.yellow); 
 		//building
-		g.fillRect(600, 180, 180, 140); 
+		g.fillRect(600, 205, 180, 115); 
 		g.setColor(Color.gray); 
 		//doors
 		g.drawRect(671, 282, 20, 35); 
-		g.drawRect(669, 281, 22, 37);
-		g.drawRect(668, 280, 23, 38);
+		g.drawRect(670, 281, 22, 37);
+		g.drawRect(669, 280, 23, 38);
 		g.drawRect(691, 282, 20, 35);
-		g.drawRect(689, 281, 22, 37);
-		g.drawRect(688, 280, 23, 38);
+		g.drawRect(690, 281, 22, 37);
+		g.drawRect(689, 280, 23, 38);
 		//windows
 		g.drawRect(610, 280, 45, 20);
 		g.drawRect(609, 279, 47, 22);
@@ -69,8 +71,29 @@ public class buildings {
 		//sign
 		g.setColor(Color.black);
 		g.setFont(new Font("JOE'S BURGER SHACK", Font.ITALIC, 12));
-		g.drawString("JOE'S BURGER SHACK", 625, 195);
+		g.drawString("JOE'S BURGER SHACK", 625, 260);
 		
-		
+		Random randint = new Random(12345);
+		for (int k = 1; k <= 100; k++)
+		{
+
+			int x = randint.nextInt(200) + 605;
+			int y = randint.nextInt(80) + 450;
+			g.fillOval(x, y, 5, 5);
+			int black = randint.nextInt(50);
+			g.setColor(new Color (black));
+		}
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+	
