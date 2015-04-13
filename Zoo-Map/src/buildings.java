@@ -105,4 +105,8 @@ public class buildings {
 
 
 
+<<<<<<< HEAD
 	
+=======
+	
+>>>>>>> branch 'master' of https://github.com/ccarmo4/zoo-map.git
