@@ -24,7 +24,7 @@ public class AirHockey extends Applet implements KeyListener {
         x = 0;
         y = 500;
     }    
-    
+    //calling the craft (the image) so that it can be used
     public AirHockey(String craft) {
     
     	ImageIcon ii = new ImageIcon(this.getClass().getResource(craft));
@@ -35,7 +35,8 @@ public class AirHockey extends Applet implements KeyListener {
         y = 500;
     }
 
-
+//This is the class where the directions and the variables that control moving are located
+   
     public void move() {
         x += dx;
         y += dy;
@@ -52,11 +53,12 @@ public class AirHockey extends Applet implements KeyListener {
     public Image getImage() {
         return image;
     }
-
+//In this class, it tells the program what to do when a certain key is pressed
     public void keyPressed(KeyEvent e) {
 
         int key = e.getKeyCode();
-
+//once the program recieves the information on what key is pressed, it will do the action which correlates to that key
+//for example, if the key pressed is the left key, the x value will decrease by one until the key is released
         if (key == KeyEvent.VK_LEFT) {
             dx = -1;
         }
@@ -73,7 +75,7 @@ public class AirHockey extends Applet implements KeyListener {
             dy = 1;
         }
     }
-
+//This class tells the program that once the key is released, that no action needs to be taken
     public void keyReleased(KeyEvent e) {
         int key = e.getKeyCode();
 

@@ -71,6 +71,12 @@ public class buildings {
 		//adding a lake
 		g.setColor(new Color(128,255,255));
 		g.fillOval(250,100,250,100);
+		//adding a bush
+		g.setColor(new Color(0, 255,0));
+		g.fillOval(240, 95,35,35);
+		g.fillOval(250, 75,35,35);
+		g.fillOval(260, 95,35,35);
+		
 		
 	}
 }
