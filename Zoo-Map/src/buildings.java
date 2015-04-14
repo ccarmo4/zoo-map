@@ -82,18 +82,8 @@ public class buildings {
 		g.fillOval(260, 95,35,35);
 		
 		
-		Random randint = new Random(12345);
-		for (int k = 1; k <= 100; k++)
-		{
-
-			int x = randint.nextInt(200) + 605;
-			int y = randint.nextInt(80) + 450;
-			g.fillOval(x, y, 5, 5);
-			int black = randint.nextInt(50);
-			g.setColor(new Color (black));
 		}
 	}
-}
 
 
 
@@ -105,8 +95,4 @@ public class buildings {
 
 
 
-<<<<<<< HEAD
-	
-=======
-	
->>>>>>> branch 'master' of https://github.com/ccarmo4/zoo-map.git
+
