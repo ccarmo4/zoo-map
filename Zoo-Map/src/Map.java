@@ -44,11 +44,16 @@ private AirHockey craft;
 		buildings.drawem(g);
 
 		//LINKING PART
-		//ElephantPart.drawPanel.paintComponent(g);
-
+		//Draws Elephant successfully
+		ElephantPart.drawPanel.paintComponent(g);
 		//Draws Flamingo successfully
-		//FlamingoPart.drawHabitat(g);
-		
+		FlamingoPart.drawHabitat(g);
+		//Draws Hippo successfully
+		HippoPart.drawPanel.paintComponent(g);
+		//Draws Snow Leopard successfully
+		SnowLeopardPart.drawHabitat(g);
+		//Draws Penguin successfully
+		PenguinPart.drawPanel.paintComponent(g);
 		//Calling the image in class AirHockey
 		 craft = new AirHockey();
 		 
