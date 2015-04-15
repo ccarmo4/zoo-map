@@ -5,17 +5,32 @@
 
 import java.awt.*;
 import java.applet.*;
+import java.awt.event.*;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
 
-public class Map extends Applet
+public class Map extends Applet implements Runnable
+
 {
+	int x = 0;
+	int y = 550;
 /****/ private static final long 
 serialVersionUID = 1L;
 
-	public void paint(Graphics g)
-	{
-	g.setColor(Color.blue);
-		Polygon path = new Polygon();
+//public void Jmenu() {
+//}
 
+private AirHockey craft;
+
+	public void paint(Graphics g)
+	
+	{
+		//Background image (grass)
+		final AirHockey grass = new AirHockey("pixalted grass.png");
+		g.drawImage(grass.getImage(),0,0,grass);
+		//Main Path
+		g.setColor(Color.blue);
+		Polygon path = new Polygon();
 		path.addPoint(0, 550);
 		path.addPoint(450, 345);
 		path.addPoint(800, 345);
@@ -28,30 +43,18 @@ serialVersionUID = 1L;
 		path.addPoint(0, 750);
 		g.fillPolygon(path);
 		
-		g.drawLine(50, 0, 50, 900);
-		g.drawLine(0, 530, 2000, 530);
-		
-		Polygon paths = new Polygon();
-		paths.addPoint(0, 555);
-	//	paths.addPoint()
+	
+	
 	
 		
-		//Restrooms
-		g.setColor(new Color(128, 128, 128)); //building
-		g.fillRect(1200, 100, 220, 100);
-		g.setColor(new Color(145, 145, 145)); //divider
-		g.drawRect(1200, 110, 110, 90);		
-		g.drawRect(1310, 110, 110, 90);
-		g.setColor(Color.blue); //doors
-		g.fillRect(1220, 165, 20, 35);		
-		g.fillRect(1380, 165, 20, 35);
-		g.setColor(Color.white); //signs
-		g.setFont(new Font("RESTROOMS", Font.ITALIC, 12));
-		g.drawString("RESTROOMS", 1270, 110);
-		g.setFont(new Font("MENS", Font.BOLD, 10));
-		g.drawString("MENS", 1217, 160);		
-		g.drawString("WOMENS", 1367, 160);
 		
+
+		//LINKING PART
+		ElephantPart.drawPanel.paintComponent(g);
+		FlamingoPart.drawHabitat(g);
+		buildings.drawem(g);
+		
+
 		//Gift Shop
 		g.setColor(new Color(128, 64, 64)); //building
 		g.fillRect(200, 250, 140, 140); 
@@ -73,10 +76,35 @@ serialVersionUID = 1L;
 		g.setFont(new Font("JOE'S BURGER SHACK", Font.ITALIC, 12));
 		g.drawString("JOE'S BURGER SHACK", 605, 225);
 		
-		AnimatedMan.drawMan(g);
 		
+		
+
+		//drawing man
+		 craft = new AirHockey();
+		 
+		 g.drawImage(craft.getImage(), x, y, craft);
+
 		
 	}
-	
-	
+		//Run Method 
+	Thread runner;
+	 public void start() {
+	     if (runner == null) {
+	       runner = new Thread(this);
+	       runner.start();
+	     }
+	   }
+
+	  
+	  
+	   public void run() {
+	     while (true) {
+	      x++;
+	       repaint();
+	      try { Thread.sleep(10); }
+	    
+	       catch (InterruptedException e) {}
+	     }
+	   }
+	   
 }
