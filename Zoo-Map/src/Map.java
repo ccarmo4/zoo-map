@@ -10,26 +10,35 @@ import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 
 public class Map extends Applet implements Runnable
-
 {
 	int x = 0;
 	int y = 550;
-/****/ private static final long 
+
+ private static final long 
 serialVersionUID = 1L;
 
 //public void Jmenu() {
 //}
 
+
+private static final long serialVersionUID = 1L;
+
+
 private AirHockey craft;
 
 	public void paint(Graphics g)
-	
 	{
-		//Background image (grass)
+		//BACKGROUND IMAGE (GRASS)
 		final AirHockey grass = new AirHockey("pixalted grass.png");
 		g.drawImage(grass.getImage(),0,0,grass);
+
 		//Main Path
 		g.setColor(Color.blue);
+
+		
+		//MAINPATH
+	g.setColor(Color.blue);
+
 		Polygon path = new Polygon();
 		path.addPoint(0, 550);
 		path.addPoint(450, 345);
@@ -42,18 +51,17 @@ private AirHockey craft;
 		path.addPoint(450, 545);
 		path.addPoint(0, 750);
 		g.fillPolygon(path);
-		
-	
-	
-	
-		
-		
 
-		//LINKING PART
+				//LINKING PART
+		buildings.drawem(g);
 		ElephantPart.drawPanel.paintComponent(g);
 		FlamingoPart.drawHabitat(g);
+
 		buildings.drawem(g);
-		
+
+		HippoPart.drawPanel.paintComponent(g);
+		SnowLeopardPart.drawHabitat(g);
+
 
 		//Gift Shop
 		g.setColor(new Color(128, 64, 64)); //building
@@ -80,31 +88,33 @@ private AirHockey craft;
 		
 
 		//drawing man
+
+		//DRAWING MAN
+
 		 craft = new AirHockey();
-		 
 		 g.drawImage(craft.getImage(), x, y, craft);
 
+
 		
+
+
 	}
-		//Run Method 
-	Thread runner;
-	 public void start() {
-	     if (runner == null) {
+	
+		//RUN METHOD 
+		Thread runner;
+		public void start() {
+		if (runner == null) {
 	       runner = new Thread(this);
 	       runner.start();
-	     }
-	   }
-
-	  
-	  
-	   public void run() {
-	     while (true) {
-	      x++;
-	       repaint();
-	      try { Thread.sleep(10); }
-	    
-	       catch (InterruptedException e) {}
-	     }
-	   }
 	   
+	}
+	 
+	   public void run() {
+	   while (true) {
+	      x++;
+	      repaint();
+	   try { Thread.sleep(10); }
+	   catch (InterruptedException e) {}
+	   }
+	}	   
 }
