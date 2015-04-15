@@ -17,11 +17,9 @@ public class Map extends Applet implements Runnable
  private static final long 
 serialVersionUID = 1L;
 
-//public void Jmenu() {
-//}
 
 
-private static final long serialVersionUID = 1L;
+
 
 
 private AirHockey craft;
@@ -106,6 +104,7 @@ private AirHockey craft;
 		if (runner == null) {
 	       runner = new Thread(this);
 	       runner.start();
+		}
 	   
 	}
 	 
