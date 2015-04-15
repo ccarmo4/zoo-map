@@ -82,6 +82,7 @@ public class buildings {
 		g.fillOval(260, 95,35,35);
 		
 		
+		
 		}
 	}
 
