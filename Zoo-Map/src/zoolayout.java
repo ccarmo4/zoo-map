@@ -28,7 +28,7 @@ public class zoolayout extends JFrame {
 
     private void initUI() {
     	
-    	//aparently makes this entire thing start
+    	//This starts the program and labels the zoo
         String zoo =  "Zoo Directory";
         
         label = new JLabel(zoo);
@@ -104,6 +104,9 @@ gl.setVerticalGroup(gl.createParallelGroup()
         JMenuItem squidMi = new JMenuItem("squid" );
         JMenuItem dolphinMi = new JMenuItem("dolphin" );
         JMenuItem SharkMi = new JMenuItem("shark");
+        
+        
+        JMenuItem PenguinMi = new JenuItem("Penguin");
         
         //dolphin sub-menu and habitat launching
         impMenu.add(dolphinMi);
