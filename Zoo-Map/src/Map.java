@@ -55,7 +55,7 @@ private AirHockey craft;
 		ElephantPart.drawPanel.paintComponent(g);
 		FlamingoPart.drawHabitat(g);
 
-		buildings.drawem(g);
+		
 
 		HippoPart.drawPanel.paintComponent(g);
 		SnowLeopardPart.drawHabitat(g);
