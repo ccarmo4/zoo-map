@@ -1,9 +1,11 @@
 
+import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Container;
 import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.Graphics;
+import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -16,6 +18,8 @@ import javax.swing.JFrame;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
+import javax.swing.JPanel;
+import javax.swing.WindowConstants;
 
 //Creating a new class, which is gonna use JFrame format
 public class ZooDirectory extends JFrame {
@@ -79,7 +83,33 @@ gl.setVerticalGroup(gl.createParallelGroup()
         .addComponent(arg[0])
 );}
 
+public class ImagePanel extends JPanel {
 
+    private Image image = null;
+
+    public ImagePanel(String Capture) {
+        this.image = new ImageIcon(Capture).getImage();
+    }
+
+    @Override
+    protected void paintComponent(Graphics g) {
+        super.paintComponent(g);
+        g.drawImage(image, 0, 0, image.getWidth(null), image.getHeight(null), null);
+    }
+
+    /**
+     * @param args
+     */
+    public void main(String[] args) {
+        ImagePanel panel = new ImagePanel("resources/image.jpg");
+
+        JFrame frame = new JFrame("Frame");
+        frame.setSize(800, 600);
+        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        frame.getContentPane().add(panel, BorderLayout.CENTER);
+        frame.setVisible(true);
+    }
+}
 
 
     
