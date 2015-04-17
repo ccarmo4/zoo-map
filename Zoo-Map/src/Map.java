@@ -5,9 +5,7 @@
 
 import java.awt.*;
 import java.applet.*;
-import java.awt.event.*;
-import javax.swing.JMenu;
-import javax.swing.JMenuBar;
+
 
 public class Map extends Applet implements Runnable
 {
@@ -16,11 +14,6 @@ public class Map extends Applet implements Runnable
 
  private static final long 
 serialVersionUID = 1L;
-
-
-
-
-
 
 private AirHockey craft;
 
@@ -57,13 +50,7 @@ private AirHockey craft;
 		HippoPart.drawPanel.paintComponent(g);
 		SnowLeopardPart.drawHabitat(g);
 		PenguinPart.drawPanel.paintComponent(g);
-		MeerkatPart.drawHabitat(g);
-		
-		
-
 	
-
-
 		//Gift Shop
 		g.setColor(new Color(128, 64, 64)); //building
 		g.fillRect(200, 250, 140, 140); 
@@ -85,19 +72,11 @@ private AirHockey craft;
 		g.setFont(new Font("JOE'S BURGER SHACK", Font.ITALIC, 12));
 		g.drawString("JOE'S BURGER SHACK", 605, 225);
 		
-		
-		
-
-		//drawing man
 
 		//DRAWING MAN
 
 		 craft = new AirHockey();
 		 g.drawImage(craft.getImage(), x, y, craft);
-
-
-		
-
 
 	}
 	
