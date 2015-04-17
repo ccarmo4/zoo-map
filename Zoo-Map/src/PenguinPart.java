@@ -21,7 +21,7 @@ final public class PenguinPart {
         new PenguinPart().go();
     }
 
-    private void go() {
+    public void go() {
         frame = new JFrame("Test");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 

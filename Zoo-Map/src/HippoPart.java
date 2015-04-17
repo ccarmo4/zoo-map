@@ -16,7 +16,7 @@ public static void main(String[] args)
 new HippoPart().go();
 }
 
-private void go() {
+public void go() {
 frame = new JFrame("Hippo");
 frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 drawPanel = new DrawPanel();

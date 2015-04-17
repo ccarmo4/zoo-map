@@ -85,20 +85,20 @@ gl.setVerticalGroup(gl.createParallelGroup()
     
     private void createMenuBar() {
         
-        JMenuBar menubar = new JMenuBar();
+        final JMenuBar menubar = new JMenuBar();
         
         //images
         ImageIcon iconNew = new ImageIcon("new.png");
         ImageIcon iconOpen = new ImageIcon("open.png");
         ImageIcon iconSave = new ImageIcon("save.png");
-        ImageIcon iconExit = new ImageIcon("exit.png");
+        final ImageIcon iconExit = new ImageIcon("exit.png");
         
         //classifies the different sub-menus there will be
-        JMenu fileMenu = new JMenu("Habitats");
-         JMenu impMenu = new JMenu("Aquarium");
+        final JMenu fileMenu = new JMenu("Habitats");
+         final JMenu impMenu = new JMenu("Aquarium");
          final JMenu varMenu = new JMenu("Safari");
-         JMenu zarMenu = new JMenu("Mountains");
-         JMenu parMenu = new JMenu("Tropical Paradise");
+         final JMenu zarMenu = new JMenu("Mountains");
+         final JMenu parMenu = new JMenu("Tropical Paradise");
          
        //aquarium   
          JMenuItem PenguinMi = new JMenuItem("Penguin");
@@ -141,13 +141,13 @@ gl.setVerticalGroup(gl.createParallelGroup()
          JMenuItem SnowLeopardMi = new JMenuItem ("Snow Leopard");
          
          //Snow Leopard Submenu set up and launch
-         ZarMenu.add(SnowLeopardMi);
+         zarMenu.add(SnowLeopardMi);
          SnowLeopardMi.addActionListener(new ActionListener() {
          	@Override
          	public void actionPerformed(ActionEvent event) {
-         		SnowLeopardPart SnowLeopardPart = new SnowLeopardPart();
-         		SnowLeopardPart.go();
-         		SnowLeopardPart.frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+         		SnowLeopardPart snowLeopardPart = new SnowLeopardPart();
+         		snowLeopardPart.go();
+         		snowLeopardPart.frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
          	}
          });
          
@@ -158,13 +158,13 @@ gl.setVerticalGroup(gl.createParallelGroup()
          
          //Flamingo Submenu set up and launch
          
-         ZarMenu.add(FlamingoMi);
+         zarMenu.add(FlamingoMi);
          FlamingoMi.addActionListener(new ActionListener() {
          	@Override
          	public void actionPerformed(ActionEvent event) {
-         		FlamingoPart FlamingoPart = new FlamingoPart();
-         		FlamingoPart.go();	
-         	FlamingoPart.frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+         		FlamingoPart flamingoPart = new FlamingoPart();
+         		flamingoPart.go();	
+         	flamingoPart.frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
          	}
          });
                                    
@@ -198,7 +198,7 @@ gl.setVerticalGroup(gl.createParallelGroup()
      }
      
      //Runs the program
-     public static void main(String[] args) {
+     public void main(String[] args) {
          
          EventQueue.invokeLater(new Runnable() {
              @Override
