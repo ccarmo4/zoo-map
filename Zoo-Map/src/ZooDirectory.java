@@ -131,9 +131,9 @@ gl.setVerticalGroup(gl.createParallelGroup()
          HippoMi.addActionListener(new ActionListener() {
          	@Override
          	public void actionPerformed(ActionEvent event) {
-         		HippoMi HippoMi = new HippoMi();
-         		HippoMi.go();
-         		HippoMi.frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+         		HippoPart HippoPart = new HippoPart();
+         		HippoPart.go();
+         		HippoPart.frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
          	}
          });
          
@@ -145,23 +145,29 @@ gl.setVerticalGroup(gl.createParallelGroup()
          SnowLeopardMi.addActionListener(new ActionListener() {
          	@Override
          	public void actionPerformed(ActionEvent event) {
-         		SnowLeopardMi = new SnowLeopardMi();
-         		SnowLeopardMi.go();
-         		SnowLeopardMi.frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+         		SnowLeopardPart SnowLeopardPart = new SnowLeopardPart();
+         		SnowLeopardPart.go();
+         		SnowLeopardPart.frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
          	}
          });
          
          //Tropical Paradise
          
+         JMenuItem FlamingoMi = new JMenuItem ("Flamingo");
          
          
+         //Flamingo Submenu set up and launch
          
-         
-         
-         
-         
-         
-         
+         ZarMenu.add(FlamingoMi);
+         FlamingoMi.addActionListener(new ActionListener() {
+         	@Override
+         	public void actionPerformed(ActionEvent event) {
+         		FlamingoPart FlamingoPart = new FlamingoPart();
+         		FlamingoPart.go();	
+         	FlamingoPart.frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+         	}
+         });
+                                   
          JMenuItem exitMi = new JMenuItem("Exit Directory", iconExit);
          exitMi.setToolTipText("Exit application");
 
@@ -198,7 +204,7 @@ gl.setVerticalGroup(gl.createParallelGroup()
              @Override
              public void run() {
                  
-                 zoolayout ex = new zoolayout();
+                 ZooDirectory ex = new ZooDirectory();
                  ex.setVisible(true);
      }
      });
