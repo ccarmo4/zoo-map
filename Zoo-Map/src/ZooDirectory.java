@@ -96,7 +96,7 @@ gl.setVerticalGroup(gl.createParallelGroup()
         //classifies the different sub-menus there will be
         JMenu fileMenu = new JMenu("Habitats");
          JMenu impMenu = new JMenu("Aquarium");
-         JMenu varMenu = new JMenu("Safari");
+         final JMenu varMenu = new JMenu("Safari");
          JMenu zarMenu = new JMenu("Mountains");
          JMenu parMenu = new JMenu("Tropical Paradise");
          
@@ -108,9 +108,9 @@ gl.setVerticalGroup(gl.createParallelGroup()
          PenguinMi.addActionListener(new ActionListener() {
          	@Override
          	public void actionPerformed(ActionEvent event) {
-         		PenguinPart PenguinPart = new PenguinPart();
-         		PenguinPart.go();
-         		PenguinPart.frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+         		PenguinPart penguinPart = new PenguinPart();
+         		penguinPart.go();
+         		penguinPart.frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
          		
       //Safari
          JMenuItem ElephantMi = new JMenuItem ("Elephant");
@@ -131,9 +131,9 @@ gl.setVerticalGroup(gl.createParallelGroup()
          HippoMi.addActionListener(new ActionListener() {
          	@Override
          	public void actionPerformed(ActionEvent event) {
-         		HippoPart HippoPart = new HippoPart();
-         		HippoPart.go();
-         		HippoPart.frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+         		HippoPart hippoPart = new HippoPart();
+         		hippoPart.go();
+         		hippoPart.frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
          	}
          });
          
