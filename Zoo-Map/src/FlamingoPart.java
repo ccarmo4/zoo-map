@@ -3,6 +3,7 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.geom.Rectangle2D;
 import java.awt.*;
+
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
@@ -14,7 +15,9 @@ import javax.swing.SwingUtilities;
 	        
 	        Graphics2D g2d = (Graphics2D) g;
 	        
-	        
+	        {
+	    		new FlamingoPart().go();
+	    		}
 	     
 
 	      //Sky

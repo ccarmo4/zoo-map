@@ -17,13 +17,47 @@ import javax.swing.SwingUtilities;
 
 
 public class SnowLeopardPart extends JPanel{
-	{
-		new SnowLeopardPart().go();
-		}
+	
+	public static class SnowLeopard extends JFrame {
+	
+	
+	/**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+
+	public SnowLeopard () {
+	    initUI();
+	}
+	
+	public final void initUI() {
+	
+	    DrawPanel dpnl = new DrawPanel();
+	    add(dpnl);
+	
+	    setSize(360, 300);
+	    setTitle("Rectangles");
+	    setLocationRelativeTo(null);
+	    setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	}
+	
+	/*public static void main(String[] args) {
+	
+	    SwingUtilities.invokeLater(new Runnable() {
+	        public void run() {
+	          SnowLeopard ex = new SnowLeopard();
+	            ex.setVisible(true);
+	        }
+	    });
+	}*/
+	}
+
 	/**
 	 * 
 	 */
 	public static final long serialVersionUID = 1L;
+	//protected Object frame extends JFrame;
+	
 
 	public void paint(Graphics g)
 	
@@ -200,33 +234,10 @@ private void doDrawing(Graphics g) {
 	// TODO Auto-generated method stub
 	
 }
-}
 
-public class SnowLeopard extends JFrame {
-
-public SnowLeopard () {
-    initUI();
-}
-
-public final void initUI() {
-
-    DrawPanel dpnl = new DrawPanel();
-    add(dpnl);
-
-    setSize(360, 300);
-    setTitle("Rectangles");
-    setLocationRelativeTo(null);
-    setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-}
-
-public static void main(String[] args) {
-
-    SwingUtilities.invokeLater(new Runnable() {
-        public void run() {
-          SnowLeopard ex = new SnowLeopard();
-            ex.setVisible(true);
-        }
-    });
+public void go() {
+	// TODO Auto-generated method stub
+	
 }
 }
 

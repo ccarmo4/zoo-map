@@ -45,13 +45,13 @@ public class ZooDirectory extends JFrame {
         */
         createMenuBar();
 
-        
+//setting up the top part and the title (with quit option)
 setTitle("Habitats");
 setSize(300, 500);
 setLocationRelativeTo(null);
 setDefaultCloseOperation(EXIT_ON_CLOSE);
 JButton quitButton = new JButton("Quit");
-
+//adding an action listener that allows the user to quit when the program is prompted
 quitButton.addActionListener(new ActionListener() {
     @Override
     public void actionPerformed(ActionEvent event) {
@@ -66,7 +66,7 @@ createLayout(label);
 setTitle("Thank you for visiting!");
 }
 
-
+//creating the pane
 private void createLayout(JComponent... arg) {
 
 Container pane = getContentPane();
@@ -82,7 +82,7 @@ gl.setHorizontalGroup(gl.createSequentialGroup()
 gl.setVerticalGroup(gl.createParallelGroup()
         .addComponent(arg[0])
 );}
-
+//this class will set up the background image
 public class ImagePanel extends JPanel {
 
     private Image image = null;
@@ -171,16 +171,16 @@ public class ImagePanel extends JPanel {
          JMenuItem SnowLeopardMi = new JMenuItem ("Snow Leopard");
          
          //Snow Leopard Submenu set up and launch (calling file and opening it when clicked)
-         zarMenu.add(SnowLeopardMi);
+        /* zarMenu.add(SnowLeopardMi);
          SnowLeopardMi.addActionListener(new ActionListener() {
          	@Override
          	public void actionPerformed(ActionEvent event) {
          		SnowLeopardPart snowLeopardPart = new SnowLeopardPart();
          		snowLeopardPart.go();
-         		snowLeopardPart.frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+         		snowLeopardPart.SnowLeopard.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
          	}
          });
-         
+         */
          //Tropical Paradise (setting up a new subtopic for each animal)
          
          JMenuItem FlamingoMi = new JMenuItem ("Flamingo");
@@ -188,7 +188,7 @@ public class ImagePanel extends JPanel {
          
          //Flamingo Submenu set up and launch (calling file and opening it when clicked)
          
-         zarMenu.add(FlamingoMi);
+       /*  zarMenu.add(FlamingoMi);
          FlamingoMi.addActionListener(new ActionListener() {
          	@Override
          	public void actionPerformed(ActionEvent event) {
@@ -197,7 +197,7 @@ public class ImagePanel extends JPanel {
          	flamingoPart.frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
          	}
          });
-                                   
+             */                      
          JMenuItem exitMi = new JMenuItem("Exit Directory", iconExit);
          exitMi.setToolTipText("Exit application");
 
