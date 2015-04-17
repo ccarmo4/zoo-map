@@ -86,11 +86,11 @@ gl.setVerticalGroup(gl.createParallelGroup()
 public class ImagePanel extends JPanel {
 
     private Image image = null;
-
+//this grabs the image and usees it 
     public ImagePanel(String Capture) {
         this.image = new ImageIcon(Capture).getImage();
     }
-
+//it paints the image 
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
@@ -100,6 +100,7 @@ public class ImagePanel extends JPanel {
     /**
      * @param args
      */
+    //this creates a new panel with the images and the height and width
     public void main(String[] args) {
         ImagePanel panel = new ImagePanel("resources/image.jpg");
 
@@ -197,7 +198,9 @@ public class ImagePanel extends JPanel {
          	flamingoPart.frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
          	}
          });
-             */                      
+             */       
+         
+         //implements an exit directory function that allows the person to exit the directory
          JMenuItem exitMi = new JMenuItem("Exit Directory", iconExit);
          exitMi.setToolTipText("Exit application");
 
@@ -223,7 +226,7 @@ public class ImagePanel extends JPanel {
          fileMenu.add(exitMi);
 
          menubar.add(fileMenu);
-
+//this adds all the components to the menu bar
          setJMenuBar(menubar);        
      }
      
