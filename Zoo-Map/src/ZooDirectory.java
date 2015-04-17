@@ -100,10 +100,10 @@ gl.setVerticalGroup(gl.createParallelGroup()
          final JMenu zarMenu = new JMenu("Mountains");
          final JMenu parMenu = new JMenu("Tropical Paradise");
          
-       //aquarium   
+       //aquarium   (setting up a new subtopic for each animal)
          JMenuItem PenguinMi = new JMenuItem("Penguin");
          
-         //Penguin submenu launch
+         //Penguin submenu launch (calling file and opening it when clicked)
          impMenu.add(PenguinMi);
          PenguinMi.addActionListener(new ActionListener() {
          	@Override
@@ -112,11 +112,11 @@ gl.setVerticalGroup(gl.createParallelGroup()
          		penguinPart.go();
          		penguinPart.frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
          		
-      //Safari
+      //Safari (setting up a new subtopic for each animal)
          JMenuItem ElephantMi = new JMenuItem ("Elephant");
          JMenuItem HippoMi = new JMenuItem ("Hippo");
          
-      //Elephant Submenu set up and launch
+      //Elephant Submenu set up and launch (calling file and opening it when clicked)
          varMenu.add(ElephantMi);
          ElephantMi.addActionListener(new ActionListener() {
          	@Override
@@ -137,10 +137,10 @@ gl.setVerticalGroup(gl.createParallelGroup()
          	}
          });
          
-         //Mountains
+         //Mountains (setting up a new subtopic for each animal)
          JMenuItem SnowLeopardMi = new JMenuItem ("Snow Leopard");
          
-         //Snow Leopard Submenu set up and launch
+         //Snow Leopard Submenu set up and launch (calling file and opening it when clicked)
          zarMenu.add(SnowLeopardMi);
          SnowLeopardMi.addActionListener(new ActionListener() {
          	@Override
@@ -151,12 +151,12 @@ gl.setVerticalGroup(gl.createParallelGroup()
          	}
          });
          
-         //Tropical Paradise
+         //Tropical Paradise (setting up a new subtopic for each animal)
          
          JMenuItem FlamingoMi = new JMenuItem ("Flamingo");
          
          
-         //Flamingo Submenu set up and launch
+         //Flamingo Submenu set up and launch (calling file and opening it when clicked)
          
          zarMenu.add(FlamingoMi);
          FlamingoMi.addActionListener(new ActionListener() {
