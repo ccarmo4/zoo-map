@@ -5,9 +5,21 @@
 import java.awt.*;
 import java.applet.*;
 import java.util.Random;
+import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.geom.Rectangle2D;
+import java.awt.*;
 
-public class SnowLeopardPart extends Applet{
-	
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.SwingUtilities;
+
+
+public class SnowLeopardPart extends JPanel{
+	{
+		new SnowLeopardPart().go();
+		}
 	/**
 	 * 
 	 */
@@ -175,5 +187,48 @@ public class SnowLeopardPart extends Applet{
 			g2d.setColor(new Color (black));
 		}
 	}
+
+
+@Override
+public void paintComponent(Graphics g) {
+    
+    super.paintComponent(g);
+    doDrawing(g);
 }
+
+private void doDrawing(Graphics g) {
+	// TODO Auto-generated method stub
+	
+}
+}
+
+public class SnowLeopard extends JFrame {
+
+public SnowLeopard () {
+    initUI();
+}
+
+public final void initUI() {
+
+    DrawPanel dpnl = new DrawPanel();
+    add(dpnl);
+
+    setSize(360, 300);
+    setTitle("Rectangles");
+    setLocationRelativeTo(null);
+    setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+}
+
+public static void main(String[] args) {
+
+    SwingUtilities.invokeLater(new Runnable() {
+        public void run() {
+          SnowLeopard ex = new SnowLeopard();
+            ex.setVisible(true);
+        }
+    });
+}
+}
+
+
 

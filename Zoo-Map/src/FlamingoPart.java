@@ -97,9 +97,9 @@ import javax.swing.SwingUtilities;
 	    }
 	}
 
-	public class flamingo extends JFrame {
+	public class FlamingoPart extends JFrame {
 
-	    public flamingo() {
+	    public FlamingoPart() {
 	        initUI();
 	    }
 
@@ -118,26 +118,16 @@ import javax.swing.SwingUtilities;
 
 	        SwingUtilities.invokeLater(new Runnable() {
 	            public void run() {
-	               flamingo ex = new flamingo();
+	               FlamingoPart ex = new FlamingoPart();
 	                ex.setVisible(true);
 	            }
 	        });
 	    }
-	}
+	
+	
 	
 
-
-		//beak
 		
-		g.setColor(Color.orange);
-	g.fillRect(1045, 480, 30, 20);
-		
-		
-		
-		
-		g.setColor(new Color (128,64,64));
-		g.fillRect(940, 647, 5, 100);
-		g.fillRect(980,647,5,100);
 		
 		
 	}
@@ -145,4 +135,4 @@ import javax.swing.SwingUtilities;
 		
 		
 		
-	}
+	
